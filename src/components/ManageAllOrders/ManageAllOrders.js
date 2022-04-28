@@ -14,7 +14,7 @@ const ManageAllOrders = () => {
     const isDelete = window.confirm("Are you sure?");
     if (isDelete) {
       axios
-        .post("https://bloodcurdling-corpse-06487.herokuapp.com/deleteOrder", {
+        .post("https://ancient-badlands-40166.herokuapp.com/deleteOrder", {
           UserId: id,
         })
         .then((res) => {
@@ -30,7 +30,7 @@ const ManageAllOrders = () => {
     const id = e.target.querySelector("select").id;
 
     axios
-      .post("https://bloodcurdling-corpse-06487.herokuapp.com/updateStatus", {
+      .post("https://ancient-badlands-40166.herokuapp.com/updateStatus", {
         status: status,
         id: id,
       })
@@ -45,7 +45,7 @@ const ManageAllOrders = () => {
 
   useEffect(() => {
     axios
-      .get("https://bloodcurdling-corpse-06487.herokuapp.com/manageAllOrders")
+      .get("https://ancient-badlands-40166.herokuapp.com/manageAllOrders")
       .then((res) => setAllOrders(res.data));
   }, [deleteCount, statusCount, user]);
 

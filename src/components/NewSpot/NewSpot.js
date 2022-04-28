@@ -12,7 +12,7 @@ const NewSpot = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://bloodcurdling-corpse-06487.herokuapp.com/newSpot", data)
+      .post("https://ancient-badlands-40166.herokuapp.com/newSpot", data)
       .then((res) => {
         alert("New spot has been added!");
         reset();

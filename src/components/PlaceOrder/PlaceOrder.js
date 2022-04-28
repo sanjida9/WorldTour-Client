@@ -26,7 +26,7 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`https://bloodcurdling-corpse-06487.herokuapp.com/spot/${id}`)
+      .get(`https://ancient-badlands-40166.herokuapp.com/spot/${id}`)
       .then((res) => setSingleSpot(res.data));
   }, []);
 
@@ -38,7 +38,7 @@ const PlaceOrder = () => {
     data.userEmail = user.email;
 
     axios
-      .post("https://bloodcurdling-corpse-06487.herokuapp.com/placeOrder", data)
+      .post("https://ancient-badlands-40166.herokuapp.com/placeOrder", data)
       .then((res) => {
         alert("Order has been placed!");
         reset();
@@ -56,8 +56,19 @@ const PlaceOrder = () => {
       <div className="card col-md-6">
         <img src={singleSpot.img} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">{singleSpot.planName}</h5>
-          <p className="card-text">{singleSpot.description}</p>
+          <h3 className="card-title text-success fw-bold">
+            <i className="fas fa-plane-departure"></i> {singleSpot.planName}
+          </h3>
+          <h4 className="card-title text-success fw-bold">
+            {singleSpot.price}
+            <i className="fas fa-dollar-sign"></i>
+          </h4>
+          <h5 className="card-title text-success fw-bold">
+            {singleSpot.rating} <i className="fas fa-star fs-6"></i>
+          </h5>
+          <p className="card-text fw-bold text-success">
+            <i className="fas fa-highlighter"></i> {singleSpot.description}
+          </p>
           <NavLink to={`/spot/${singleSpot._id}`}>Book Now</NavLink>
         </div>
       </div>

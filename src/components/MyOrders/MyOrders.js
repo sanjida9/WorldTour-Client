@@ -13,7 +13,7 @@ const MyOrders = () => {
     const isDelete = window.confirm("Are you sure?");
     if (isDelete) {
       axios
-        .post("https://bloodcurdling-corpse-06487.herokuapp.com/deleteOrder", {
+        .post("https://ancient-badlands-40166.herokuapp.com/deleteOrder", {
           UserId: id,
         })
         .then((res) => {
@@ -25,10 +25,9 @@ const MyOrders = () => {
 
   useEffect(() => {
     axios
-      .post(
-        "https://bloodcurdling-corpse-06487.herokuapp.com/singleUserOrders",
-        { userEmail: user.email }
-      )
+      .post("https://ancient-badlands-40166.herokuapp.com/singleUserOrders", {
+        userEmail: user.email,
+      })
       .then((res) => {
         setSingleUserOrder(res.data);
       });

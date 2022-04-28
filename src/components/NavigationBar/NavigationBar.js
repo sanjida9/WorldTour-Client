@@ -26,60 +26,89 @@ const NavigationBar = () => {
             to="/home"
           >
             <h2>
-              <i className="fas fa-eye"></i> World Tours
+              <i className="fas fa-eye"></i> WorldTour
             </h2>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
-              <Nav.Link as={NavLink} className="text-white" to="/home">
-                <NavLink to="/home" activeStyle={activeStyle}>
-                  Home
-                </NavLink>
-              </Nav.Link>
+              <NavLink
+                className="pt-1 mx-2"
+                to="/home"
+                activeStyle={activeStyle}
+              >
+                Home
+              </NavLink>
 
               {!displayName ? (
                 <>
-                  <Nav.Link as={NavLink} className="text-white" to="/register">
-                    <NavLink to="/register" activeStyle={activeStyle}>
-                      Register
-                    </NavLink>
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} className="text-white" to="/login">
-                    <NavLink to="/login" activeStyle={activeStyle}>
-                      Login
-                    </NavLink>
-                  </Nav.Link>
+                  <NavLink
+                    className="px-2 pt-1"
+                    to="/register"
+                    activeStyle={activeStyle}
+                  >
+                    Register
+                  </NavLink>
+
+                  <NavLink
+                    className="px-2 pt-1"
+                    to="/login"
+                    activeStyle={activeStyle}
+                  >
+                    Login
+                  </NavLink>
                 </>
               ) : (
-                <div className="d-flex">
-                  <Nav.Link as={NavLink} className="text-white" to="/home">
-                    <NavLink to="/spot" activeStyle={activeStyle}>
-                      Service
+                <div className="d-flex ">
+                  <div className="pt-3">
+                    <NavLink
+                      className=" mx-2"
+                      to="/spot"
+                      activeStyle={activeStyle}
+                    >
+                      Tours
                     </NavLink>
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} className="text-white" to="/home">
-                    <NavLink to="/myOrders" activeStyle={activeStyle}>
+
+                    <NavLink
+                      className=" mx-2"
+                      to="/myOrders"
+                      activeStyle={activeStyle}
+                    >
                       MyOrders
                     </NavLink>
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} className="text-white" to="/home">
-                    <NavLink to="/manageAllOrders" activeStyle={activeStyle}>
+
+                    <NavLink
+                      className=" mx-2"
+                      to="/manageAllOrders"
+                      activeStyle={activeStyle}
+                    >
                       ManageAllOrders
                     </NavLink>
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} className="text-white" to="/about">
-                    <NavLink to="/about" activeStyle={activeStyle}>
+
+                    <NavLink
+                      className=" mx-2"
+                      to="/newSpot"
+                      activeStyle={activeStyle}
+                    >
+                      Add New Spot
+                    </NavLink>
+
+                    <NavLink
+                      className=" mx-2"
+                      to="/about"
+                      activeStyle={activeStyle}
+                    >
                       About
                     </NavLink>
-                  </Nav.Link>
 
-                  <Nav.Link as={NavLink} className="text-white" to="/contact">
-                    <NavLink to="/contact" activeStyle={activeStyle}>
+                    {/* <NavLink
+                      className=" mx-2"
+                      to="/contact"
+                      activeStyle={activeStyle}
+                    >
                       Contact
-                    </NavLink>
-                  </Nav.Link>
-
+                    </NavLink> */}
+                  </div>
                   <NavDropdown
                     title={
                       <img

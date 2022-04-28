@@ -21,14 +21,14 @@ const Banner = () => {
           >
             <div className="text-center fw-bold  my-5 p-5">
               <h1 className="text-success fw-bold">
-                <i>Welcome To World Tours</i>
+                <i>Welcome To World Tour</i>
               </h1>
 
               <h6 className="my-4 text-success fs-5">
                 <i>The face is a picture of the mind with an eyes</i>
               </h6>
 
-              <Link to={"/doctor"}>
+              <Link to={"/spot"}>
                 <Button className="rounded-pill fs-5 py-2 px-4 btn-success btnHover text-light">
                   Book Now
                 </Button>
